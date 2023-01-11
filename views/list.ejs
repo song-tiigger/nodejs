@@ -49,7 +49,7 @@
             <% for(let i = 0; i < postdata.length; i++) { %>
                 <li class="list-group-item d-flex justify-content-between">
                     <div>
-                        <h5>제목: <%= postdata[i].제목%></h5>
+                        <h5><a href="http://localhost:8080/detail/<%= postdata[i]._id %>"> 제목: <%= postdata[i].제목%></a></h5>
                         <p>날짜: <%= postdata[i].날짜%></p>
                     </div>
                     <div>
@@ -84,6 +84,8 @@
             const id = e.target.dataset.id;
             location.replace(`/edit/${id}`);
         });
+
+        
 
 
 
