@@ -9,47 +9,47 @@
     <title>Document</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-light">
+<body style="background-color: #222831;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #FFD369;">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">TodoApp</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/write">Write</a>
-                </li>
-                <li class="nav-item me-5">
-                    <a class="nav-link" href="/list">리스트</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">로그인</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/mypage">마이페이지</a>
-                </li>
-                </li>
-            </ul>
-        </div>
+            <a class="navbar-brand" href="#" style="color: #222831;">🏁 TODAY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/write">Write</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/list">리스트</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">로그인</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <h3 class="container mt-3">오늘의 할 일</h3>
-    <div class="container mt-3">
-        <form action="/add" method="POST">
+
+    <div class="container" style="max-width: 768px; color: #eee;">
+        <div style="margin: 40px 0;">
+            <h3>오늘의 할 일</h3>
+            <div style="font-size: 15px; color: #aaa;">할 일을 등록해보세요!</div>
+        </div>
+        <form action="/add" method="POST"> <!-- action, method속성 필수 -->
             <div class="form-group mb-3">
                 <label class="pb-1">할 일</label>
-                <input type="text" class="form-control" name="title">
+                <input type="text" class="form-control" name="title" style="background-color: #eee;"> <!-- name지정 필수 -->
             </div>
             <div class="form-group mb-3">
                 <label>날짜</label>
-                <input id="date" type="text" class="form-control" name="date">
+                <input id="date" type="text" class="form-control" name="date" style="background-color: #eee;">
             </div>
-            <button type="submit" class="btn btn-outline-secondary">Submit</button>
+            <button type="submit" class="btn btn-secondary" style="float: right;">등록</button>
         </form>
     </div>
 

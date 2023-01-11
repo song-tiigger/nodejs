@@ -130,8 +130,9 @@ passport.use(new LocalStrategy({
 passport.serializeUser(function(user, done) {
     done(null, user.id)
 });
+
 passport.deserializeUser(function(아이디, done) {
-    db.collection('login').findOne({id : 아이디}, function(error, result) {
+    db.collection('login').findOne({ id : 아이디 }, function(error, result) {
         done(null, result)
     });
 });
@@ -147,8 +148,6 @@ function loginFn(req, res, next) {
         res.send('로그인 불가')
     }
 }
-
-
 
 app.get('/search', function(req, res) {
     console.log(req.query);
